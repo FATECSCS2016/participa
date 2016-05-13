@@ -16,7 +16,12 @@ angular.module('starter.controllers', [])
     Chats.remove(chat);
   };
 })
-
+.controller('LoginCtrl',function($scope){
+    $scope.user={};
+    $scope.login=function(){
+        console.log("Login info: "+$scope.user);
+    };
+})
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
 })
