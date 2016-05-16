@@ -14,7 +14,7 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-  $scope.chats = [{
+   $scope.chats = [{
     id: 0,
     name: 'Ben Sparrow',
     lastText: 'You on your way?',
@@ -46,11 +46,6 @@ angular.module('starter.controllers', [])
     $scope.login=function(){
         console.log("Login info: "+$scope.user);
         //$state.go('tab.form');
-        $state.go('tab.account');
+        $state.go('tab.form');
     };
-})
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
 });
