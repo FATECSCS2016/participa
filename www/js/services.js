@@ -47,4 +47,38 @@ angular.module('starter.services', [])
       return null;
     }
   };
+})
+.factory('Forms', function() {
+  // Might use a resource here that returns a JSON array
+
+  // Some fake testing data
+  var forms = [{
+    id: 0,
+    name: 'Questionario Geografia 1',
+    lastText: 'You on your way?',
+    face: 'img/ben.png'
+  },{
+    id: 1,
+    name: 'Questionario Geografia 2',
+    lastText: 'You on your way?',
+    face: 'img/ben.png'
+  }];
+
+  return {
+    all: function() {
+      return forms;
+    },
+    remove: function(chat) {
+      chats.splice(chats.indexOf(chat), 1);
+    },
+    get: function(FormId) {
+      for (var i = 0; i < forms.length; i++) {
+        if (forms[i].id === parseInt(FormId)) {
+          return forms[i];
+        }
+      }
+      return null;
+    }
+  };
 });
+

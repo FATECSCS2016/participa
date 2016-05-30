@@ -32,38 +32,29 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $stateProvider
 
   // setup an abstract state for the tabs directive
-    .state('tab', {
-    url: '/tab',
+    .state('tabTeacher', {
+    url: '/tabTeacher',
     abstract: true,
-    templateUrl: 'templates/tabs.html'
+    templateUrl: 'templates/tabTeacher/tabs.html'
   })
 
   // Each tab has its own nav history stack:
 
-  .state('tab.form', {
-    url: '/form',
+  .state('tabTeacher.forms', {
+    url: '/forms',
     views: {
-      'tab-form': {
-        templateUrl: 'templates/tab-form.html',
-        controller: 'FormCtrl'
+      'tabTeacher-forms': {
+        templateUrl: 'templates/tabTeacher/tab-forms.html',
+        controller: 'FormsCtrl'
       }
     }
   })
-  .state('tab.questions', {
-      url: '/form/:questionID',
+  .state('tabTeacher.form', {
+      url: '/form/:formID',
       views: {
-        'tab-form': {
-          templateUrl: 'templates/tab-questions.html',
-          controller: 'QuestionsCtrl'
-        }
-      }
-    })
-    .state('tab.account', {
-      url: '/account',
-      views: {
-        'tab-account': {
-          templateUrl: 'templates/tab-account.html',
-          controller: 'AccountCtrl'
+        'tabTeacher-forms': {
+          templateUrl: 'templates/tabTeacher/tab-formDetail.html',
+          controller: 'FormCtrl'
         }
       }
     })
