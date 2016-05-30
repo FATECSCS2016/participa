@@ -4,7 +4,17 @@
   The FriendsCtrl pulls data from the Friends service (service.js)
   The Friends service returns an array of friend data
 -->
-<ion-view view-title="Question Form">
+<ion-view view-title='{{form.name}}'>
   <ion-content class="padding">
+    <ion-list>
+      <ion-item ng-repeat="question in form.questions">
+        {{question.question}}
+        <ion-list>
+          <ion-item ng-repeat="option in question.options">
+            {{option.option}}:{{option.optionValue}}
+          </ion-item>
+        </ion-list>
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>
