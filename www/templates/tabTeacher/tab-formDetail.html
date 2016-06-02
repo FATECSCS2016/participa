@@ -10,7 +10,6 @@
       <ion-item ng-repeat="question in form.questions">
         {{question.question}}
         <ion-list>
-          <ion-item ng-repeat="option in question.options">
             {{option.option}}:{{option.optionValue}}
           </ion-item>
         </ion-list>

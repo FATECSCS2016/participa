@@ -1,1 +1,6 @@
 /* Empty. Add your own CSS if you like */
+.butao{
+    float: left;
+    display: inline-block;
+    margin-bottom: 100px;
+}
