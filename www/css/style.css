@@ -4,3 +4,7 @@
     display: inline-block;
     margin-bottom: 100px;
 }
+.footerTab{
+    width: 100px; 
+    overflow: auto;
+}
