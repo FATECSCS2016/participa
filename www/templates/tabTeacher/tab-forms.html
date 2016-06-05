@@ -4,7 +4,7 @@
   The FriendsCtrl pulls data from the Friends service (service.js)
   The Friends service returns an array of friend data
 -->
-<ion-view view-title="Question Forms">
+<ion-view view-title="Questionários">
   <ion-content class="padding">
       <ion-list >
         <ion-item ng-repeat="form in forms" href="#/tabTeacher/form/{{form.id}}">
@@ -13,11 +13,7 @@
       </ion-list>
   </ion-content>
   <ion-footer-bar>
-    <div class=butao>
-      <md-button class="md-fab" aria-label="Eat cake">
-          <md-icon md-svg-src="img/add.png"></md-icon>
-      </md-button>
-    </div>
+      <button class="button icon ion-plus-circled pull-right">Adicionar</button>
   </ion-footer-bar>
 </ion-view>
 

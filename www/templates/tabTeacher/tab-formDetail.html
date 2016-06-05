@@ -8,10 +8,11 @@
   <ion-content class="padding">
     <ion-list>
       <ion-item ng-repeat="question in form.questions">
-        {{question.question}}
+        <h2>{{question.question}}</h2>
         <ion-list>
-            {{option.option}}:{{option.optionValue}}
-          </ion-item>
+            <ion-item ng-repeat="option in question.options">
+              <ion-checkbox ng-value="option.option">{{option.optionValue}}</ion-checkbox>
+            </ion-item>
         </ion-list>
       </ion-item>
     </ion-list>
